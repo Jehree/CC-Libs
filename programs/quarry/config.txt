@@ -1,0 +1,20 @@
+{
+  resume_sweeping_dir = {
+    y = 0,
+    x = 0,
+    z = 1,
+  },
+  yStart = 0,
+  resume_pos = {
+    y = 0,
+    x = 0,
+    z = 0,
+  },
+  zLimit = 12,
+  xLimit = 12,
+  resume_mining_dir = {
+    y = 0,
+    x = 0,
+    z = 1,
+  },
+}
