@@ -3,6 +3,8 @@ package.path = package.path .. ";../?.lua"
 CmdLib = require("libraries.command_line_library.command_line_library")
 require("libraries.misc_utils.utils")
 
+local remoteComputerId = 3
+
 local monitor = peripheral.wrap("monitor_0")
 
 local drawerControllerName = "storagedrawers:controller_3"
@@ -37,7 +39,7 @@ local function main()
     UpdateMonitor()
 
     CmdLib.addBoundFunction(UpdateMonitor)
-    CmdLib.wirelessSetup(os.getComputerID(), 3)
+    CmdLib.wirelessSetup(os.getComputerID(), remoteComputerId)
 
     CmdLib.createCommand("test", "", Test)
     CmdLib.createCommand("sort", "Sort items in vault to drawers and unstackable chests", Sort, {inventory = vault})
