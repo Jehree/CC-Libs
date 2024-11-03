@@ -1,0 +1,12 @@
+{
+  current_dir = {
+    y = 0,
+    x = 0,
+    z = 1,
+  },
+  current_pos = {
+    y = 0,
+    x = 0,
+    z = 0,
+  },
+}
