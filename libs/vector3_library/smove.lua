@@ -24,33 +24,33 @@ MoveDirection = {
 }
 
 local function getTurtleDir()
-    local data = GetTable("libraries/vector3_library/data.txt")
+    local data = GetTable("libraries/vector3_library/smove_pos_data.txt")
     return data.current_dir
 end
 
 
 local function getTurtlePos()
-    local data = GetTable("libraries/vector3_library/data.txt")
+    local data = GetTable("libraries/vector3_library/smove_pos_data.txt")
     return data.current_pos
 end
 
 
 local function updateDirFile(newDir)
-    local data = GetTable("libraries/vector3_library/data.txt")
+    local data = GetTable("libraries/vector3_library/smove_pos_data.txt")
     data.current_dir = newDir
-    SaveTable(data, "libraries/vector3_library/data.txt")
+    SaveTable(data, "libraries/vector3_library/smove_pos_data.txt")
 end
 
 
 local function updatePosFile(newPos)
-    local data = GetTable("libraries/vector3_library/data.txt")
+    local data = GetTable("libraries/vector3_library/smove_pos_data.txt")
     data.current_pos = newPos
-    SaveTable(data, "libraries/vector3_library/data.txt")
+    SaveTable(data, "libraries/vector3_library/smove_pos_data.txt")
 end
 
 
 local function resetPositionData()
-    SaveTable(defaultData, "libraries/vector3_library/data.txt")
+    SaveTable(defaultData, "libraries/vector3_library/smove_pos_data.txt")
 end
 
 
