@@ -6,6 +6,7 @@ Smove = require("libraries.vector3_library.smove")
 
 local miningDir = Vec3Lib.north
 local sweepingDir = Vec3Lib.east
+local pullyComputerId = 4
 
 local config = {}
 
@@ -34,7 +35,7 @@ end
 
 function LowerPully(skipTimer)
 
-    rednet.send(4, "lower_pully")
+    rednet.send(pullyComputerId, "lower_pully")
 
     local timeSeconds = 0
     local timeExcededMessageSent = false
@@ -59,17 +60,17 @@ end
 
 
 function ReturnPully()
-    rednet.send(4, "return_pully")
+    rednet.send(pullyComputerId, "return_pully")
 end
 
 
 function LongWaitMessage()
-    rednet.send(4, "long_wait_message")
+    rednet.send(pullyComputerId, "long_wait_message")
 end
 
 
 function RequestRefuel()
-    rednet.send(4, "refuel_please")
+    rednet.send(pullyComputerId, "refuel_please")
 end
 
 
